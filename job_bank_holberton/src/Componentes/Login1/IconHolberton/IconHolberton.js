@@ -1,6 +1,6 @@
 import React from 'react';
 import './IconHolberton.css';
-import logo from './holberton_icon.png'
+import logo from './holberton_icon.png';
 
 function IconHolberton() {
   return (

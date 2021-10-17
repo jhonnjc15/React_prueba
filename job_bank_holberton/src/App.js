@@ -1,27 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import { Login1 } from './Paginas/Login1/Login1';
 import { Login2 } from './Paginas/Login2/Login2';
 import { NotFoundPage } from './Paginas/NotFoundPage';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import { Puesto } from "./Paginas/PuestoStdView/Puesto";
 
 
 function App() {
   return (
     <Router>
       <Switch>
-          <Route exact path="/" component={Login1}/>
-          <Route path="/login" component={LoginUser}/>
+        <Route exact path="/" component={Login1}/>
+        <Route path="/login" component={LoginUser}/>
+        
+        <Route exact path="/puesto" component={Puesto}/>
 
-          <Route path="/404" component={NotFoundPage}/>
-          <Route path="*">
+        <Route path="/404" component={NotFoundPage}/>
+        <Route path="*">
             <Redirect to="/404"/>
-          </Route>
+        </Route>
       </Switch>
     </Router>
   );
@@ -41,4 +39,5 @@ function LoginUser() {
     </Switch>
   )
 }
+
 export default App;
