@@ -1,7 +1,11 @@
 import React from 'react';
 import './Login.css';
+import { useHistory } from 'react-router-dom'; 
+
 
 function Login() {
+  let history = useHistory();
+  let mode = "estudiante"
   return (
     <div className='containerPrincipal'>
       <div className="form-group">
@@ -21,7 +25,12 @@ function Login() {
             <input type="text" placeholder="Contraseña" name="password"/>
           </div>
         </div>
-        <button className="Button">Iniciar Sesión</button>
+        <button 
+          className="Button" 
+          onClick={ () => {history.push("/estudiante/puestos-de-trabajo")
+          } }>
+          Iniciar Sesión
+        </button>
       </div>
     </div>
   );
