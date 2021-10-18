@@ -1,7 +1,7 @@
 import React from 'react';
-import './Login2.css';
-import { IconHolberton } from '../../Componentes/Login2/IconHolberton/IconHolberton';
-import { Login } from '../../Componentes/Login2/Login/Login';
+import './Login.css';
+import { IconHolberton } from '../../components/IconHolberton/IconHolberton';
+import { LoginComponent } from '../../components/Login/Login';
 
 class StudentLogin extends React.Component {
 	
@@ -12,7 +12,7 @@ class StudentLogin extends React.Component {
 					<IconHolberton />
 				</div>
 				<div className='BoxLogin'> 
-					<Login />
+					<LoginComponent />
 				</div>
 			</div>
 		);
